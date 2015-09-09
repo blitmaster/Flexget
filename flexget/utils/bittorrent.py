@@ -134,7 +134,7 @@ def bdecode(text):
         src = tokenize(text)
         data = decode_item(src.next, src.next()) # pylint:disable=E1101
         for token in src: # look for more tokens
-            raise SyntaxError("trailing junk")
+            log.warning("POS %r ..." % (token))
     except (AttributeError, ValueError, StopIteration) as e:
         raise SyntaxError("syntax error: %s" % e)
     return data

@@ -34,7 +34,7 @@ requests = ReqSession(timeout=25)
 
 # This is a FlexGet API key
 api_key = '4D297D8CFDE0E105'
-language = 'en'
+language = 'es'
 server = 'http://www.thetvdb.com/api/'
 _mirrors = {}
 persist = SimplePersistence('api_tvdb')
