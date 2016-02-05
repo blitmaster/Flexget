@@ -1,5 +1,4 @@
 from __future__ import unicode_literals, division, absolute_import
-import os
 import re
 import logging
 
@@ -112,6 +111,10 @@ class FilterExistsMovie(object):
                     if not self.file_pattern.search(f.name):
                         continue
                     items.append(f.name)
+
+            if not items:
+                log.verbose('No items with type %s were found in %s' % (config.get('type'), folder))
+                continue
 
             for item in items:
                 count_files += 1

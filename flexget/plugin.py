@@ -6,7 +6,6 @@ from __future__ import absolute_import, division, unicode_literals
 import logging
 import os
 import re
-import sys
 import time
 import warnings
 from itertools import ifilter
@@ -20,10 +19,6 @@ from flexget.event import add_event_handler as add_phase_handler
 from flexget.event import fire_event, remove_event_handlers
 
 log = logging.getLogger('plugin')
-
-__all__ = ['PluginWarning', 'PluginError', 'register_plugin', 'register_parser_option', 'register_task_phase',
-           'get_plugin_by_name', 'get_plugins_by_group', 'get_plugin_keywords', 'get_plugins_by_phase',
-           'get_phases_by_plugin', 'internet', 'priority']
 
 
 class DependencyError(Exception):
